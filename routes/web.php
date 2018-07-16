@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('admin', function () {
+    return view('templante.menu');
+});
+
+
+Route::get('paises', function () {
+    return view('pais');
+});
+Route::get('ciudades', function () {
+    return view('ciudad');
+});
+Route::get('categorias', function () {
+    return view('categoria');
+});
+Route::get('negocios', function () {
+    return view('negocio');
+});
