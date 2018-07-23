@@ -31,3 +31,7 @@ Route::get('categorias', function () {
 Route::get('negocios', function () {
     return view('negocio');
 });
+
+Route::get('paisesdos', function () {
+    return view('paises.index');
+});

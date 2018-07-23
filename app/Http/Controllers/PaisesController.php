@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Paise;
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
+
 
 class PaisesController extends Controller
 {
@@ -14,6 +17,8 @@ class PaisesController extends Controller
     public function index()
     {
         //
+        $paises =Paise::All();
+        return view('paises.index',compact('paises'));
     }
 
     /**
@@ -23,7 +28,7 @@ class PaisesController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,6 +40,7 @@ class PaisesController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -46,6 +52,9 @@ class PaisesController extends Controller
     public function show($id)
     {
         //
+        $paises = Paise::find($id);        
+        return view('paises.index',compact('paises'));
+
     }
 
     /**
