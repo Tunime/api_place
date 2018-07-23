@@ -19,9 +19,7 @@ Route::get('admin', function () {
 });
 
 
-Route::get('paises', function () {
-    return view('pais');
-});
+Route::resource('/paises', 'PaisController');
 Route::get('ciudades', function () {
     return view('ciudad');
 });

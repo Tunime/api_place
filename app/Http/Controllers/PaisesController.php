@@ -17,8 +17,8 @@ class PaisesController extends Controller
     public function index()
     {
         //
-        $paises =Paise::All();
-        return view('paises.index',compact('paises'));
+        $paises = Paise::all();
+        return view('pais',compact('paises'));
     }
 
     /**
