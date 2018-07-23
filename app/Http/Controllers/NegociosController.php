@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Paise;
+
 use Illuminate\Http\Request;
 
-class PaisController extends Controller
+class NegociosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,6 @@ class PaisController extends Controller
     public function index()
     {
         //
-        $paises = Paise::all();
-        return view('pais',compact('paises'));
     }
 
     /**
