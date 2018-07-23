@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Negocio;
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
 
 class NegociosController extends Controller
 {
@@ -14,7 +16,8 @@ class NegociosController extends Controller
     public function index()
     {
         //
-        //return view('peliculas.index', compact('proximoestrenos', 'estrenos', 'peliculas'));
+        $negocios =Negocio::All();
+        return view('negocios.index',compact('negocios'));
     }
 
     /**

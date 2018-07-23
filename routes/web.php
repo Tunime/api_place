@@ -18,9 +18,15 @@ Route::get('admin', function () {
     return view('templante.menu');
 });
 
+Route::resource('/paises', 'PaisesController');
+Route::resource('/ciudades', 'CiudadesController');
+Route::resource('/categorias', 'CategoriasController');
+Route::resource('/negocios', 'NegociosController');
 
-Route::resource('/paises', 'PaisController');
-Route::get('ciudades', function () {
+
+Route::get('/ciudades/show', 'CiudadesController@show')->name('ciudades');
+
+/*Route::get('ciudades', function () {
     return view('ciudad');
 });
 Route::get('categorias', function () {
@@ -28,8 +34,8 @@ Route::get('categorias', function () {
 });
 Route::get('negocios', function () {
     return view('negocio');
-});
+}); */
 
-Route::get('paisesdos', function () {
-    return view('paises.index');
-});
+//Route::get('paises', function () {
+    //return view('pais');
+//});

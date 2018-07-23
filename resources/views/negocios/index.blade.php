@@ -12,11 +12,31 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>id</th>
-                  <th>Categoria</th>
-                  <th>Nombre</th>
-                  <th>Direccion</th>
-                  <th>Celular</th>
+                  <th class="col-xs-1">
+                    <center>
+                      ID
+                    </center>
+                  </th>
+                  <th class="col-xs-10">
+                    <center>
+                      CATEGORIA
+                    </center>
+                  </th>
+                  <th class="col-xs-10">
+                    <center>
+                      NOMBRE
+                    </center>
+                  </th>
+                  <th class="col-xs-10">
+                    <center>
+                      DIRECCION
+                    </center>
+                  </th>
+                  <th class="col-xs-10">
+                    <center>
+                      CELULAR
+                    </center>
+                  </th>
                 </tr>
               </thead>
               <tbody>

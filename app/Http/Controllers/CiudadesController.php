@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Ciudade;
 use Illuminate\Http\Request;
+use App\Paise;
+use Session;
+use Redirect;
 
 class CiudadesController extends Controller
 {
@@ -14,6 +17,9 @@ class CiudadesController extends Controller
     public function index()
     {
         //
+         $ciudades =Ciudade::All();
+         //$paises = Paise::pluck('nombre', 'id');             
+        return view('ciudades.index',compact('ciudades'));
     }
 
     /**
@@ -35,6 +41,10 @@ class CiudadesController extends Controller
     public function store(Request $request)
     {
         //
+        $ciudade = new Ciudade;       
+        $ciudade-> paise_id = $request -> paise_id;        
+        $ciudade -> save();
+        return Redirect::route('ciudades.index', [$ciudade -> id]);
     }
 
     /**
@@ -46,6 +56,9 @@ class CiudadesController extends Controller
     public function show($id)
     {
         //
+        $ciudade = Ciudade::find($id);
+        return view('ciudades.show', compact('ciudade'));
+
     }
 
     /**
