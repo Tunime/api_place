@@ -18,10 +18,8 @@ Route::get('admin', function () {
     return view('templante.menu');
 });
 
+Route::resource('/paises', 'PaisesController');
 
-Route::get('paises', function () {
-    return view('pais');
-});
 Route::get('ciudades', function () {
     return view('ciudad');
 });
